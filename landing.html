@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Возврат в Детство</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="images/icon.jpg" type="image/gif" sizes="20x20">
+<link rel="stylesheet" type="text/css" media="screen" href="main.css" />    
+    <link rel="stylesheet" type="text/css" media="screen" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.2/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css" />
+
+    
+    <script src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+    
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>    
+   
+    
+</head>
+<body>
+
+<div id="app"></div>
+
+
+
+
+        <script type="text/babel">
+        
+        
+
+
+/***********************
+  Menu Component
+ ***********************/
+
+ const Menu = props => {
+  return (
+    <div className={`menu-container ${props.showMenu}`}>
+      <div className="overlay" />
+      <div className="menu-items">
+        <ul><br />
+          <li>
+            <a href="#welcome-section" onClick={props.toggleMenu}>
+              Главная 
+            </a>
+          </li>
+          <li>
+            <a href="#about" onClick={props.toggleMenu}>
+              О тренинге
+            </a>
+          </li>
+          <li>
+            <a href="#projects" onClick={props.toggleMenu}>
+              Отзывы
+            </a>
+          </li>
+          <li>
+            <a href="#contact" onClick={props.toggleMenu}>
+              Контакты 
+            </a>
+          </li>
+        </ul>
+        <SocialLinks />
+      </div>
+    </div>
+   
+  );
+};
+
+
+/***********************
+  Nav Component
+ ***********************/
+
+const Nav = props => {
+  return (
+    <React.Fragment>
+      <nav id="navbar">
+        <div className="nav-wrapper">
+          <p className="text-white lead">
+            <strong> Белая Комната 
+            
+            <SocialLinks /></strong>
+          </p>
+          <a
+            onClick={props.toggleMenu}
+            className={props.showMenu === 'active' ? 'menu-button active' : 'menu-button'}
+          >
+            <span />
+          </a>
+        </div>
+      </nav>
+    </React.Fragment>
+  );
+};
+
+
+
+/***********************
+  Header Component
+ ***********************/
+
+const Header = props => {
+  return (
+    <header id="welcome-section">
+
+      <video autoPlay loop id="video-background" muted plays-inline>
+        <source src="images/videoFon.mp4" type="video/mp4" />
+      </video>
+
+      <div className="forest" />
+      <div className="silhouette" />
+      <div className="moon" />
+      <div className="container">
+        
+        <h4>
+          <span className="line text-white lead">Самая известная и результативная </span>
+          <span className="line text-white lead" id="training">тренинговая программа</span>
+          <span className="line text-white lead">от Белой Комнаты.</span>
+        </h4>
+
+
+   <img className="img-fluid" src='images/wrh.jpg' width= "70%" height="auto" id="imgh"/>
+        <br /><br />
+
+        <div className="buttons">
+
+          <a href="#projects">Отзывы &nbsp;
+          <i class="fas fa-comment-dots"></i>
+          </a>
+
+          <a href="#contact" className="cta">
+            Контакты &nbsp;
+            <i class="fas fa-phone"></i>
+          </a>
+
+        </div>
+      </div>
+    </header>
+  );
+};
+
+
+
+
+
+
+
+
+
+
+
+/***********************
+  About Component
+ ***********************/
+
+const About = props => {
+  return (
+    <section id="about">
+      <div className="wrapper">
+        <article>
+          <div className="title">
+            <h3>О тренинге</h3>
+            <p className="separator" />
+          </div>
+          <div className="desc full">
+           {/**** <h4 className="subtitle">Белая комната</h4> ***/}
+
+           <img className="img-fluid mx-auto d-block" src='images/wrNew.jpg' max-width= "100%" height="auto"/>
+        <br /><br />
+
+            <p>
+              Программу представляет психологический центр Белая комната.
+              Мы работаем в психотерапевтической практике более 25 лет 
+              подбирая методы психотерапии индивидуально для каждого пациента!
+              Мы так же практикуем онлайн-терапию для пациентов, 
+              живущих в других городах и странах. 
+            </p>
+            <p>
+      За годы тренинга 99% прошедших его заявляют, что их жизнь разделилась на до и после тренинга.
+            </p>
+            <p> 
+              Гарантируем полную анонимность и конфиденциальность. 
+            </p>
+          </div>
+          <div className="title">
+            <h3>Тренинг ДЛЯ ТЕХ, КТО: </h3>
+            <p className="separator" />
+          </div>
+          <div className="desc full">
+    <h4 className="subtitle"></h4>
+           
+     <p>-недоволен качеством жизни </p>
+     <p>-потерял уверенность в себе </p>
+     <p>-погряз в стереотипах, страхах и фобиях </p>
+     <p>-хочет выйти из тупика проблем </p>
+     <p>-хочет жить здесь и сейчас, с радостью и удовольствием, как это делают дети.</p>
+          
+          </div>
+          <div className="title">
+            <h3>Возврат в детство</h3>
+            <p className="separator" />
+          </div>
+          <div className="desc full">
+            <h4 className="subtitle"></h4>
+<p>Вы помните, какое это волшебство — быть ребенком? 
+Вы помните то время, когда вашим лучшим другом была мягкая игрушка — зверушка, которой 
+вы доверяли и которую любили всем сердцем?</p> 
+
+<p>Вы могли часами самозабвенно играть со своим игрушечным чайным сервизом — точной копией настоящего,
+ — шлепать по лужам в ваших новых красных резиновых сапожках или визжать 
+ от забавных ощущений в животе, взлетая на качелях выше и выше, до самого неба.</p>  
+
+ <p>Вас постоянно охватывало чувство благоговения перед самыми незначительными объектами и событиями. 
+Муравей на огрызке яблока, капля росы, дрожащая на паутине, яркие цветные прожилки на 
+осколке разбитого камня — независимо от того, какая деятельность привлекала ваше внимание, 
+вы были абсолютно спокойны, веселы и испытывали внутреннее удовлетворение. </p> 
+
+<p>Вы были просто самим собой, и ощущать это было изумительно. </p> 
+
+  <p>Вы не можете вернуть свое детство, но вернуть радость и беспечность, 
+которое было его непременным атрибутом, вы способны. 
+Вы не отказались от него, и оно от вас не отказалось. 
+Любовь, освещавшая ваше детство, все еще живет в вас. </p> 
+
+<p>Именно для этого мы создали лучший трансформационный тренинг «Возврат в Детство». </p> 
+
+  <p>Где-то на жизненном пути мягкие игрушки и красные сапожки были разменяны на другие ценности 
+— образование, обеспеченность работой и респектабельное положение в обществе. </p> 
+
+<p>И нам всем очень не хватает непосредственной красоты тех невинных, волшебных лет. 
+Но они неподалеку — на расстоянии одного-двух ударов сердца от того места, где вы сейчас находитесь.</p>       
+          </div>
+            <br />
+          <div className="title">
+            <h3>Как это было на групповом тренинге?</h3>  
+            <p className="separator" />
+          </div>
+          <div className="desc full">
+            <h4 className="subtitle">Небольшой фото отчет группового тренинга</h4>
+
+
+            <div className = 'gallery4'> </div>
+            </div>
+
+
+        </article>
+      </div>
+    </section>
+  );
+};
+
+
+/***********************
+  Project Component
+ ***********************/
+
+
+
+const Project = props => {
+  
+
+
+
+  return (
+    <div className="project">
+      
+        <img className="project-link" src={props.img} alt={'Screenshot of ' + props.title} />
+        
+      <div className="project-details">
+        <div className="project-tile">
+         
+          {props.title}{' '}
+        </div>
+        {props.children}
+        
+      </div>
+    </div>
+  );
+};
+
+
+
+/***********************
+  Projects Component
+ ***********************/
+
+const Projects = props => {
+  return (
+    <section id="projects">
+      <div className="projects-container">
+        <div className="heading">
+          <h3 className="title">Отзывы</h3>
+          <p className="separator" />
+          <p className="subtitle">
+        Участники наших тренингов умеют управлять своей жизнью без груза прошлых обид 
+        и душевных травм.
+          </p>
+        </div>
+        <div className="projects-wrapper">
+          <Project
+            title="Лана, г.Саратов"
+   img={'images/p1.jpg'}
+            
+          >
+            <p>
+              Тренинг "Возврат в детство" позволяет осознать себя настоящую через принятие себя маленькой. 
+              Он демонстрируеткак можно всё изменить, если просто понять и принять себя и свою детскую историю. 
+              Это первый и бесценный шаг к счастливому и любимому "себе".
+            </p>
+          </Project>
+
+          <Project
+            title="Екатерина, г.Саратов "
+   img={'images/p2.jpg'}
+            
+          >
+            <p>
+          На тренинге "Возврат в детство" я встретилась со своим внутренним ребёнком, 
+          отогрела его и приняла в себе, это было очень ресурсно. Спасибо!
+            </p>
+          </Project>
+
+          <Project
+            title="Сергей, г.Москва "
+   img={'images/p3.jpg'}
+            
+          >
+            <p>
+    Прошёл онлайн тренинг, потому что понимал, что корни сегодняшних проблем лежат в детстве. 
+    И с этими обидами, травмами, душевными терзаниями, самостоятельно справится не получается. 
+    Тренинг впечатлил, получилось смягчить детские обиды на родителей, это очень важно было для меня, 
+    эти воспоминания мучили меня ежедневно, увидел причины сложных отношений со своими детьми, 
+    о которых не подозревал. Спасибо за тренинг.
+            </p>
+          </Project>
+
+        <Project
+            title="София, г.Москва "
+   img={'images/p4.jpg'}
+            
+          >
+            <p>
+    Благодаря онлайн-встрече "возврат в детство" я сумела справиться с апатией и поверить в себя. 
+    Я нашла в себе такую веру, которую раньше не чувствовала. Может быть и подозревала, что она есть. 
+    Но вот так прикоснуться к ней, мне ещё не удавалось. 
+    Я нашла в себе такую часть, которая бесконечно верит в меня, что бы ни происходило, 
+    которая со мной до конца.
+            </p>
+          </Project>    
+
+
+          
+
+         
+        </div>
+      </div>
+    </section>
+  );
+};
+
+
+
+/***********************
+  Contact Component
+ ***********************/
+
+const Contact = props => {
+  return (
+    <section id="contact">
+      <div className="container nav justify-content-center">
+        <div className="heading-wrapper">
+          <div className="heading">
+
+          
+            <p className="title">
+              Решили записаться 
+              на тренинг?
+            </p>
+           {/*<p className="separator" />*/}
+            <p className="subtitle">
+              УЗНАЙТЕ СТОИМОСТЬ и зафиксируйте<br /> 
+               за собой удобное для Вас время <br />
+              <span className="mail">
+              по номеру 8(8452)93-97-30 <br />
+              или пишите в Viber 8-917-205-22-50 Юлия Колесниченко
+              </span></p>
+              <br /><br />
+              
+                 
+
+<a target="_blank" href="http://psychologsaratov.ru/kontakty" className="btn-fancy mx-auto d-block">
+  забронировать время  <i class="far fa-clock"></i>
+</a>
+
+{/*
+      <br /> <br />
+
+  <img className="img-fluid mx-auto d-block" src='images/wrEnd.jpg' max-width= "100%" height="auto"/>  
+
+  <br /><br />        
+  <img className="img-fluid mx-auto d-block" src='images/wrl.jpg' max-width= "100%" height="auto"/> 
+  
+ */  } 
+       
+          </div>
+          <SocialLinks />
+        </div>
+        
+      </div>
+    </section>
+  );
+};
+
+
+
+/***********************
+  Footer Component
+ ***********************/
+
+const Footer = props => {
+  return (
+    <footer>
+      <div className="wrapper">
+        <h3>тел. 8(8452)93-97-30,<br /> 8-917-205-22-50</h3>
+  <h4>© {new Date().getFullYear()} Запишись на тренинг и измени свою жизнь к лучшему прямо сейчас</h4>
+        <SocialLinks />
+      </div>
+    </footer>
+  );
+};
+
+
+
+
+/***********************
+  Social Links Component
+ ***********************/
+
+const SocialLinks = props => {
+  return (
+    <div className="social">
+      <a
+        href="https://www.instagram.com/psycholog_saratov"
+        target="_blank"
+        rel="noopener noreferrer"
+        title="Ссылка на группу в инстаграмм"
+      >
+        {' '}
+        <i className="fab fa-instagram" />
+      </a>
+      <a
+        id="profile-link"
+        href="https://vk.com/psychologsaratov"
+        target="_blank"
+        rel="noopener noreferrer"
+        title="Ссылка на группу вконтакте"
+      >
+        {' '}
+        <i className="fab fa-vk" />
+      </a>
+      <a
+        href="https://ok.ru/psychologsaratov"
+        target="_blank"
+        rel="noopener noreferrer"
+        title="Ссылка на группу в одноклассники"
+      >
+        {' '}
+        <i className="fab fa-odnoklassniki" />
+      </a>
+      <a
+        href="https://www.facebook.com/belayaKomnata/"
+        target="_blank"
+        rel="noopener noreferrer"
+        title="Ссылка на группу в фейсбук"
+      >
+        {' '}
+        <i className="fab fa-facebook" />
+      </a>
+      <a
+        href="https://www.youtube.com/channel/UCGYO6BGLtqLhQMxjwSmnUxw"
+        target="_blank"
+        rel="noopener noreferrer"
+        title="Ссылка на группу в ютуб"
+      >
+        {' '}
+        <i className="fab fa-youtube" />
+      </a>
+    </div>
+  );
+};
+
+
+
+/***********************
+  Main Component
+ ***********************/
+
+class App extends React.Component {
+  state = {
+    menuState: false
+  };
+
+  toggleMenu = () => {
+    this.setState(state => ({
+      menuState: !state.menuState
+        ? 'active'
+        : state.menuState === 'deactive'
+          ? 'active'
+          : 'deactive'
+    }));
+  };
+
+  render() {
+    return (
+      <React.Fragment>
+        <Menu toggleMenu={this.toggleMenu} showMenu={this.state.menuState} />
+        <Nav toggleMenu={this.toggleMenu} showMenu={this.state.menuState} />
+        <Header />
+        <About />
+        <Projects />
+        <Contact />
+        <Footer />
+      </React.Fragment>
+    );
+  }
+
+  componentDidMount() {
+    const navbar = document.querySelector('#navbar');
+    const header = document.querySelector('#welcome-section');
+    const forest = document.querySelector('.forest');
+    const silhouette = document.querySelector('.silhouette');
+    let forestInitPos = -300;
+
+    window.onscroll = () => {
+      let scrollPos = document.documentElement.scrollTop || document.body.scrollTop;
+
+      if (scrollPos <= window.innerHeight) {
+        silhouette.style.bottom = `${parseInt(scrollPos / 6)}px`;
+        forest.style.bottom = `${parseInt(forestInitPos + scrollPos / 6)}px`;
+      }
+
+      if (scrollPos - 100 <= window.innerHeight)
+        header.style.visibility = header.style.visibility === 'hidden' && 'visible';
+      else header.style.visibility = 'hidden';
+
+      if (scrollPos + 100 >= window.innerHeight) navbar.classList.add('bg-active');
+      else navbar.classList.remove('bg-active');
+    };
+
+    (function navSmoothScrolling() {
+      const internalLinks = document.querySelectorAll('a[href^="#"]');
+      for (let i in internalLinks) {
+        if (internalLinks.hasOwnProperty(i)) {
+          internalLinks[i].addEventListener('click', e => {
+            e.preventDefault();
+            document.querySelector(internalLinks[i].hash).scrollIntoView({
+              block: 'start',
+              behavior: 'smooth'
+            });
+          });
+        }
+      }
+    })();
+  }
+}
+
+
+ReactDOM.render(<App />, document.getElementById('app'));
+
+
+
+
+
+
+
+/***********************
+  component Gallery
+ ***********************/
+
+const data = [{
+	id: 1,
+	
+	image: "https://pp.userapi.com/c851124/v851124701/7ee72/kAHQdNcWRwE.jpg"
+}, {
+	id: 2,
+
+	image: "https://pp.userapi.com/c851124/v851124701/7ee45/40huXcSTu-4.jpg"
+}, {
+	id: 3,
+	
+	image: "https://pp.userapi.com/c851124/v851124701/7ee4e/hONKCE_pvhU.jpg"
+}, {
+	id: 4,
+
+	image: "https://pp.userapi.com/c851124/v851124701/7ee57/8EiIAU0ywOA.jpg"
+}];
+
+
+// component Gallery
+// takes the tiles component
+// adds the data 
+class Gallery extends React.Component {
+  render() {
+    return (
+      <div>
+         <Tiles data={this.props.data}/>
+      </div>
+    )
+    
+  }
+}
+
+class Tiles extends React.Component {
+  
+  render() {
+    // map over data
+    // pass data into tile component
+    return (
+       <div className='tiles'>
+         {this.props.data.map((data) => {
+            return <Tile data={data} key={data.id} />
+         })}
+      </div>
+      )
+  }
+   
+}
+
+// create tile component
+// has open state
+// if for state is open
+
+class Tile extends React.Component {
+  
+  constructor(props) {
+    super(props);
+    
+    this.state = {
+      open: false
+    };
+    
+    this._clickHandler = this._clickHandler.bind(this);
+
+  }
+  
+  _clickHandler(e) {
+    e.preventDefault();
+    // switch state on click
+    if(this.state.open === false) {
+          this.setState({
+            open: true
+          });
+       } else {
+         this.setState({
+           open:false
+         })
+       }
+    
+ }
+  
+   render() {
+    // store styles
+    let clickStyles = {};
+    // once clicked
+    if(this.state.open) {
+       clickStyles= {
+        width: '62vw',
+				height: '62vw',
+				position: 'absolute',
+				top: '50%',
+				left: '50%',
+				margin: '0',
+				marginTop: '-31vw',
+				marginLeft: '-31vw',
+				boxShadow: '0 0 40px 5px rgba(0, 0, 0, 0.3)',
+				transform: 'none',
+        zIndex: '10'
+       };
+       // without click
+       } else {
+         clickStyles = {
+            width: '18vw',
+            height: '20vw'
+
+			  };
+       }
+    // attacth 
+      // click
+      // src
+      // styles
+   // to image 
+    
+    return (
+      <div className ='tile'>
+        <img 
+          onClick={this._clickHandler}
+          src ={this.props.data.image} 
+          style={clickStyles}
+          /> 
+       </div>
+    );
+    
+  }
+  
+}
+// update dom with app and data 
+ReactDOM.render(<Gallery data={data}/>, document.querySelector('.gallery4'));
+
+
+
+
+
+
+
+
+
+        
+        </script>
+
+
+
+
+
+</body>
+</html>
