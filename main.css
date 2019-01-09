@@ -643,7 +643,7 @@ background-image: linear-gradient(to top, grey 0%, #00BFBA 100%);
   background: #ffffffaa;
   padding: 2rem;
   text-align: justify;
- 
+  
 }
 
 @media only screen and (max-width: 1149px) {
@@ -827,13 +827,14 @@ background-image: linear-gradient(to top, grey 0%, #00BFBA 100%);
  *****************
  *****************/
 
+
 #contact {
  /* background: #00BFBA no-repeat right;
   background-image: linear-gradient(to top, #00BFBA 0%, #00BFBA 100%); */
 
-  background-image: url(images/wrEnd2.jpg);
+background-image: url(images/wrEnd2.jpg);
   background-size: cover;
-  
+
 
   clip-path: polygon(0 0, 20% 100px, 100% 0, 100% 100%, 0 100%);
   color: #fafafa;
@@ -847,6 +848,8 @@ background-image: linear-gradient(to top, grey 0%, #00BFBA 100%);
   margin: -100px 0 140px;
   z-index: 1;
 }
+
+
 
 #contact .container {
   width: 70%;
@@ -985,6 +988,7 @@ footer .wrapper {
   position: relative;
   overflow: hidden;
   padding: 2%;
+  
 }
 
 .btn-fancy:hover {
