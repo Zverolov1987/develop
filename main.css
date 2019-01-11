@@ -579,9 +579,11 @@ background-image: linear-gradient(to top, grey 0%, #00BFBA 100%);
   clip-path: polygon(0 0, 20% 5%, 100% 0, 100% 100%, 80% 95%, 0 100%);
   z-index: 2;
   background-image: url(images/fonWr2.jpg);
-  
+  background-size:cover;
+  background-repeat: no-repeat;
+ /* background-position: center center; */
  /* background: #00BFBA center right no-repeat; */
-  background-attachment: fixed;
+  background-attachment: fixed;	
   
 }
 
