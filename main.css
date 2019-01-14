@@ -6,11 +6,11 @@
 :root {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  box-sizing: border-box !important;
 }
 
-
-html, body {
+body,
+html{
   height: 100%;
 
 }
@@ -21,7 +21,11 @@ body {
   font-size: 62.5%;
   font-family: 'Overlock', Arial, Helvetica, sans-serif;
   overflow-x: hidden;
+  
 }
+
+
+
 
 a,
 a:visited {
@@ -447,12 +451,13 @@ background-image: linear-gradient(to top, grey 0%, #00BFBA 100%);
   width: fit-content;
   width: -moz-fit-content;
   position: absolute;
-  right: 0;
+  
   top: 50%;
   right: 25%;
   opacity: 0;
   transform: translate(0, -50%);
   animation: text-fade-in 1000ms 800ms forwards;
+  
 }
 
 @keyframes text-fade-in {
@@ -489,7 +494,7 @@ background-image: linear-gradient(to top, grey 0%, #00BFBA 100%);
 #welcome-section .container .buttons a,
 #welcome-section .container .buttons a:visited {
   width: 50%;
-  padding: 0.1rem;
+  padding: 0.7rem;
   border: 1px solid #fafafa;
   color: #fafafa;
   text-align: center;
@@ -555,7 +560,15 @@ background-image: linear-gradient(to top, grey 0%, #00BFBA 100%);
   }
 }
 
+@media (min-width: 760px) and (max-width: 991px) { 
 
+  #welcome-section .container {
+   
+    top: 50%;
+    width: 60%;
+    
+  }
+ }
 
 
 
@@ -581,7 +594,7 @@ background-image: linear-gradient(to top, grey 0%, #00BFBA 100%);
   background-image: url(images/fonWr2.jpg);
   background-size:cover;
   background-repeat: no-repeat;
- /* background-position: center center; */
+  background-position: center center; 
  /* background: #00BFBA center right no-repeat; */
   background-attachment: fixed;	
   
@@ -835,9 +848,9 @@ background-image: linear-gradient(to top, grey 0%, #00BFBA 100%);
  /* background: #00BFBA no-repeat right;
   background-image: linear-gradient(to top, #00BFBA 0%, #00BFBA 100%); */
 
-background-image: url(images/wrEnd.jpg);
+  background-image: url(images/wrEnd.jpg);
   background-size: cover;
-
+  background-position: center center;
 
   clip-path: polygon(0 0, 20% 100px, 100% 0, 100% 100%, 0 100%);
   color: #fafafa;
@@ -1160,8 +1173,13 @@ color:blue !important;
   clip-path: polygon(0 0, 20% 5%, 100% 0, 100% 100%, 80% 95%, 0 100%);
   z-index: 2;
   
-  background-image: linear-gradient(to top, yellow 0%, #00BFBA 100%);
+ /* background-image: linear-gradient(to top, yellow 0%, #00BFBA 100%); */
  
+  
+  background-image: url(images/fonWr3.jpg);
+  background-size:cover;
+  background-repeat: no-repeat;
+  background-position: center center; 
   background-attachment: fixed;
   
 }
@@ -1212,6 +1230,11 @@ color:blue !important;
   color: black;
   line-height: 1.9rem;
 }
+
+
+#about1 p .fa-gripfire{
+  color: #00BFBA;
+  }
 
 #about1 .desc.full {
   grid-column-end: span 4;
@@ -1279,18 +1302,16 @@ color:blue !important;
   font-size: 1.4rem;
   position: relative;
   background: #fafafa;
-  /*clip-path: polygon(0 0, 20% 5%, 100% 0, 100% 100%, 80% 95%, 0 100%);*/
-  z-index: 2;
-  
-  background-image: linear-gradient(to top, blue 0%, #00BFBA 100%);
- 
-  background-attachment: fixed;
-
-
- clip-path: polygon(0 0, 20% 50px, 100% 0, 100% 100%, 0 100%);
-  
+  z-index: 2;  
+ /* background-image: linear-gradient(to top, blue 0%, #00BFBA 100%); */
+  clip-path: polygon(0 0, 20% 50px, 100% 0, 100% 100%, 0 100%);
   margin: -100px 0 50px;
   
+  background-image: url(images/fonWr4.jpg);
+  background-size:cover;
+  background-repeat: no-repeat;
+  background-position: center center; 
+  background-attachment: fixed;
   
 }
 
@@ -1416,12 +1437,15 @@ color:blue !important;
   background: #fafafa;
   clip-path: polygon(0 0, 20% 5%, 100% 0, 100% 100%, 100% 100%, 0 100%);
   z-index: 2;
-
- /*clip-path: polygon(0 0, 20% 50px, 100% 0, 100% 100%, 0 100%);*/
   margin: -200px 0 -140px;
 	
-background-image: linear-gradient(to top, white 0%, #00BFBA 100%);
-  background-attachment: fixed;
+/* background-image: linear-gradient(to top, white 0%, #00BFBA 100%); */
+  
+  background-image: url(images/fonWr5.jpg);
+  background-size:cover;
+  background-repeat: no-repeat;
+  background-position: center center; 
+  background-attachment: fixed; 
   
 }
 

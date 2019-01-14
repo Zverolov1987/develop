@@ -16,7 +16,7 @@
     
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>    
    
-    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.3/jquery.min.js"></script> 
 </head>
 <body>
 
@@ -41,7 +41,7 @@
       <div className="menu-items">
         <ul><br />
           <li>
-            <a href="#welcome-section" onClick={props.toggleMenu}>
+            <a href="#welcome-section1" onClick={props.toggleMenu}>
               Главная 
             </a>
           </li>
@@ -112,7 +112,7 @@ const Header = props => {
       <div className="forest" />
       <div className="silhouette" />
       <div className="moon" />
-      <div className="container">
+      <div className="container" id="welcome-section1">
         
         <h4>
           <span className="line text-white lead">Самая известная и результативная </span>
@@ -121,7 +121,7 @@ const Header = props => {
         </h4>
 
 
-   <img className="img-fluid" src='images/wrh.jpg' width="100%" height="auto" />
+   <img className="img-fluid" src='images/wrh.jpg' width="80%" height="auto" />
         <br /><br />
 
         <div className="buttons">
@@ -212,11 +212,11 @@ const About = props => {
           <div className="desc full">
     <h4 className="subtitle"></h4>
            
-     <p><img className="img-fluid" src='images/obj.jpg' width="5%" height="auto" />-недоволен качеством жизни </p>
-     <p><img className="img-fluid" src='images/obj.jpg' width="5%" height="auto" />-потерял уверенность в себе </p>
-     <p><img className="img-fluid" src='images/obj.jpg' width="5%" height="auto" />-погряз в стереотипах, страхах и фобиях </p>
-     <p><img className="img-fluid" src='images/obj.jpg' width="5%" height="auto" />-хочет выйти из тупика проблем </p>
-     <p><img className="img-fluid" src='images/obj.jpg' width="5%" height="auto" />-хочет жить здесь и сейчас, с радостью и удовольствием, как это делают дети.</p>
+     <p><i className="fab fa-gripfire"></i>   недоволен качеством жизни; </p>
+     <p><i className="fab fa-gripfire"></i>   потерял уверенность в себе; </p>
+     <p><i className="fab fa-gripfire"></i>   погряз в стереотипах, страхах и фобиях; </p>
+     <p><i className="fab fa-gripfire"></i>   хочет выйти из тупика проблем; </p>
+     <p><i className="fab fa-gripfire"></i>   хочет жить здесь и сейчас, с радостью и удовольствием, как это делают дети.</p>
           
           </div>
 
@@ -765,9 +765,59 @@ ReactDOM.render(<Gallery data={data}/>, document.querySelector('.gallery4'));
 
 
 
+// INFINITY SCROLL
+var windowHeight = $(window).height();
+var windowWidth = $(window).width();
+console.log(windowHeight);
+console.log(windowWidth);
+
+if(windowWidth>=1500){
+
+  var scrollHeight = Math.max(
+  document.body.scrollHeight, document.documentElement.scrollHeight,
+  document.body.offsetHeight, document.documentElement.offsetHeight,
+  document.body.clientHeight, document.documentElement.clientHeight
+  )-650;
+}  else if(windowWidth>=1000 && windowWidth<1400){
+
+var scrollHeight = Math.max(
+  document.body.scrollHeight, document.documentElement.scrollHeight,
+  document.body.offsetHeight, document.documentElement.offsetHeight,
+  document.body.clientHeight, document.documentElement.clientHeight
+)-300;
+
+} else {
+
+var scrollHeight = Math.max(
+  document.body.scrollHeight, document.documentElement.scrollHeight,
+  document.body.offsetHeight, document.documentElement.offsetHeight,
+  document.body.clientHeight, document.documentElement.clientHeight
+)+200;
+
+}
+
+console.log(scrollHeight);
 
 
 
+
+$(document).ready(function() {   
+    $('body').height( scrollHeight + $(window).height() );
+    $(window).scroll(function() {
+        if ( $(window).scrollTop() >= ($('body').height() - $(window).height()) ) {
+            $(window).scrollTop(1);
+        }
+        else if ( $(window).scrollTop() == 0 ) {
+            $(window).scrollTop($('body').height() - $(window).height() -1);
+        }    
+    });
+});
+$(window).resize(function() {
+    $('body').height( scrollHeight + $(window).height() );
+});
+
+
+/*****************************/
 
         
         </script>
