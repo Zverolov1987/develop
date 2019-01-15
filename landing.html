@@ -209,7 +209,7 @@ const About1 = props => {
       <div className="wrapper">
         <article>
           
-          <div className="desc full">
+          <div className="desc full rellax">
     <h4 className="subtitle"></h4>
 	<div className="title">
             <h3>Тренинг ДЛЯ ТЕХ, КТО: </h3>
@@ -819,8 +819,17 @@ $(window).resize(function() {
         </script>
 
 
-
-
+<script src="rellax.min.js"></script>
+<script>
+  var rellax = new Rellax('.rellax', {
+    speed: -5,
+    center: false,
+    wrapper: null,
+    round: true,
+    vertical: true,
+    horizontal: false
+  });
+</script>
 
 </body>
 </html>
