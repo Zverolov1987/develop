@@ -212,15 +212,15 @@ const About1 = props => {
           <div className="desc full rellax">
     <h4 className="subtitle"></h4>
 	<div className="title">
-            <h3>Тренинг ДЛЯ ТЕХ, КТО: </h3>
+   <h3 className="rellax" data-rellax-speed="-3">Тренинг ДЛЯ ТЕХ, КТО: </h3>
             <p className="separator" />
         </div>
            
-     <p><i className="fab fa-gripfire"></i>   недоволен качеством жизни; </p>
-     <p><i className="fab fa-gripfire"></i>   потерял уверенность в себе; </p>
-     <p><i className="fab fa-gripfire"></i>   погряз в стереотипах, страхах и фобиях; </p>
-     <p><i className="fab fa-gripfire"></i>   хочет выйти из тупика проблем; </p>
-     <p><i className="fab fa-gripfire"></i>   хочет жить здесь и сейчас, с радостью и удовольствием, как это делают дети.</p>
+     <p className="rellax" data-rellax-speed="7"><i className="fab fa-gripfire"></i>   недоволен качеством жизни; </p>
+     <p className="rellax" data-rellax-speed="-1"><i className="fab fa-gripfire"></i>   потерял уверенность в себе; </p>
+     <p className="rellax" data-rellax-speed="3"><i className="fab fa-gripfire"></i>   погряз в стереотипах, страхах и фобиях; </p>
+     <p className="rellax" data-rellax-speed="-2"><i className="fab fa-gripfire"></i>   хочет выйти из тупика проблем; </p>
+     <p className="rellax" data-rellax-speed="5"><i className="fab fa-gripfire"></i>   хочет жить здесь и сейчас, с радостью и удовольствием, как это делают дети.</p>
           
           </div>
 
@@ -813,23 +813,30 @@ $(window).resize(function() {
 });
 
 
+
+
+
+
+
+
 /*****************************/
 
-        
-        </script>
 
-
-<script src="rellax.min.js"></script>
-<script>
-  var rellax = new Rellax('.rellax', {
-    speed: -5,
+ var rellax = new Rellax('.rellax', {
+    speed: -2,
     center: false,
     wrapper: null,
     round: true,
     vertical: true,
     horizontal: false
   });
-</script>
+
+
+        
+        </script>
+
+
+<script src="rellax.min.js"></script>
 
 </body>
 </html>
