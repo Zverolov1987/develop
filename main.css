@@ -594,9 +594,10 @@ background-image: linear-gradient(to top, grey 0%, #00BFBA 100%);
   background-image: url(images/fonWr2.jpg);
   background-size:cover;
   background-repeat: no-repeat;
-  background-position: center center; 
+  background-position: center center;
+  background-attachment: fixed;	 
  /* background: #00BFBA center right no-repeat; */
-  background-attachment: fixed;	
+  
   
 }
 
@@ -707,12 +708,16 @@ background-image: linear-gradient(to top, grey 0%, #00BFBA 100%);
   font-size: 1.4rem;
   position: relative;
   background: #f0f0f0;
-  background-image: url(images/fonWr1.jpg);
- 
   clip-path: polygon(0 0, 40% 5%, 100% 0, 100% 100%, 100% 100%, 0 100%);
   /*background: linear-gradient(215deg, #f0f0f0 0%,#00BFBA 100%);  */
   margin-top: -20rem;
   z-index: 1;
+
+  background-image: url(images/fonWr1.jpg);
+  background-size:cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;	
 }
 
 
