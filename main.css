@@ -709,10 +709,8 @@ background-image: linear-gradient(to top, grey 0%, #00BFBA 100%);
   position: relative;
   background: #f0f0f0;
   clip-path: polygon(0 0, 40% 5%, 100% 0, 100% 100%, 100% 100%, 0 100%);
-  /*background: linear-gradient(215deg, #f0f0f0 0%,#00BFBA 100%);  */
   margin-top: -20rem;
   z-index: 1;
-
   background-image: url(images/fonWr1.jpg);
   background-size:cover;
   background-repeat: no-repeat;
