@@ -707,15 +707,15 @@ background-image: linear-gradient(to top, grey 0%, #00BFBA 100%);
   min-height: 100vh;
   font-size: 1.4rem;
   position: relative;
-  background: #f0f0f0;
+ /* background: #f0f0f0; */
   clip-path: polygon(0 0, 40% 5%, 100% 0, 100% 100%, 100% 100%, 0 100%);
   margin-top: -20rem;
   z-index: 1;
-  background-image: url(images/fonWr1.jpg);
-  background-size:cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-attachment: fixed;	
+  background-image: url(images/fonWr1.jpg) !important;
+  background-size:cover !important;
+  background-repeat: no-repeat !important;
+  background-position: center center !important;
+  background-attachment: fixed !important;	
 }
 
 
@@ -823,9 +823,9 @@ background-image: linear-gradient(to top, grey 0%, #00BFBA 100%);
 }
 
 @media only screen and (max-width: 649px) {
-  #projects {
+  /* #projects {
     background: #f0f0f0;
-  }
+  } */
   #projects .projects-container {
     padding: 12rem 0 8rem;
   }
