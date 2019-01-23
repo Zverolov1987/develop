@@ -16,14 +16,15 @@
     
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>    
    
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.3/jquery.min.js"></script> 
 
 
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
 
 
-
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
 
 </head>
 <body>
@@ -222,11 +223,13 @@ const About1 = props => {
             <p className="separator" />
         </div>
 
-     <p><i className="fab fa-gripfire"></i>   недоволен качеством жизни; </p>
+     <p><i className="fab fa-gripfire"></i>   недоволен качеством жизни; </p> 
      <p><i className="fab fa-gripfire"></i>   потерял уверенность в себе; </p>
      <p><i className="fab fa-gripfire"></i>   погряз в стереотипах, страхах и фобиях; </p>
      <p><i className="fab fa-gripfire"></i>   хочет выйти из тупика проблем; </p>
      <p><i className="fab fa-gripfire"></i>   хочет жить здесь и сейчас, с радостью и удовольствием, как это делают дети.</p>
+
+
 
           </div>
 
@@ -310,9 +313,11 @@ const About3 = props => {
         </article>
       </div>
 	<br /><br /><br />
+
     </section>
   );
 };
+
 
 
 /***********************
@@ -344,12 +349,11 @@ const Project = props => {
 };
 
 
-
 /***********************
   Projects Component
  ***********************/
 
-const Projects = props => {
+const FeedBack = props => {
   return (
     <section id="projects">
       <div className="projects-container">
@@ -363,63 +367,91 @@ const Projects = props => {
           </p>
         </div>
         <div className="projects-wrapper">
-          <Project
-            title="Лана, г.Саратов"
-   img={'images/p1.jpg'}
             
-          >
-            <p>
-              Тренинг "Возврат в детство" позволяет осознать себя настоящую через принятие себя маленькой. 
-              Он демонстрирует как можно всё изменить, если просто понять и принять себя и свою детскую историю. 
-              Это первый и бесценный шаг к счастливому и любимому "себе".
-            </p>
-          </Project>
+<br />
 
-          <Project
-            title="Екатерина, г.Саратов "
-   img={'images/p2.jpg'}
-            
-          >
-            <p>
-          На тренинге "Возврат в детство" я встретилась со своим внутренним ребёнком, 
-          отогрела его и приняла в себе, это было очень ресурсно. Спасибо!
-            </p>
-          </Project>
-
-          <Project
-            title="Сергей, г.Москва "
-   img={'images/p3.jpg'}
-            
-          >
-            <p>
-    Прошёл онлайн тренинг, потому что понимал, что корни сегодняшних проблем лежат в детстве. 
-    И с этими обидами, травмами, душевными терзаниями, самостоятельно справится не получается. 
-    Тренинг впечатлил, получилось смягчить детские обиды на родителей, это очень важно было для меня, 
-    эти воспоминания мучили меня ежедневно, увидел причины сложных отношений со своими детьми, 
-    о которых не подозревал. Спасибо за тренинг.
-            </p>
-          </Project>
-
-        <Project
-            title="София, г.Москва "
-   img={'images/p4.jpg'}
-            
-          >
-            <p>
-    Благодаря онлайн-встрече "возврат в детство" я сумела справиться с апатией и поверить в себя. 
-    Я нашла в себе такую веру, которую раньше не чувствовала. Может быть и подозревала, что она есть. 
-    Но вот так прикоснуться к ней, мне ещё не удавалось. 
-    Я нашла в себе такую часть, которая бесконечно верит в меня, что бы ни происходило, 
-    которая со мной до конца.
-            </p>
-          </Project>    
-
-
-          
-
-         
+  
+  <div id="carouselExampleIndicators" className="carousel slide carousel-fade" data-ride="carousel" data-interval="false">
+        <ol className="carousel-indicators">
+          <li data-target="#carouselExampleIndicators" data-slide-to={0} className="active" />
+          <li data-target="#carouselExampleIndicators" data-slide-to={1} />
+          <li data-target="#carouselExampleIndicators" data-slide-to={2} />
+	  <li data-target="#carouselExampleIndicators" data-slide-to={3} />
+        </ol>
+        <div className="carousel-inner">
+          <div className="carousel-item active">
+            <img className="img-fluid mx-auto d-block" src="images/p1.jpg" alt="Первый слайд" /><br />
+<div className="text-center">
+<p className="mx-auto d-block">
+Лана, Саратов.
+</p>
+<p className="mx-auto d-block">
+ Тренинг "Возврат в детство" позволяет осознать себя настоящую через принятие себя маленькой. 
+ Он демонстрирует как можно всё изменить, если просто понять и принять себя и свою детскую историю. 
+ Это первый и бесценный шаг к счастливому и любимому "себе". 
+</p>
+</div>
+<br />
+</div>
+          <div className="carousel-item">
+            <img className="img-fluid mx-auto d-block" src="images/p2.jpg" alt="Второй слайд" /><br />
+<div className="text-center">
+<p className="mx-auto d-block">
+Екатерина, Саратов. 
+</p>
+<p className="mx-auto d-block">
+На тренинге "Возврат в детство" я встретилась со своим внутренним ребёнком, 
+отогрела его и приняла в себе, это было очень ресурсно. Спасибо! 
+</p>
+</div>
+<br />
+</div>
+          <div className="carousel-item">
+            <img className="img-fluid mx-auto d-block" src="images/p3.jpg" alt="Третий слайд" /><br />
+<div className="text-center">
+<p className="mx-auto d-block">
+Сергей, Москва.
+</p>
+<p className="mx-auto d-block">
+Прошёл онлайн тренинг, потому что понимал, что корни сегодняшних проблем лежат в детстве. 
+И с этими обидами, травмами, душевными терзаниями, самостоятельно справится не получается. 
+Тренинг впечатлил, получилось смягчить детские обиды на родителей, это очень важно было для меня, 
+эти воспоминания мучили меня ежедневно, увидел причины сложных отношений со своими детьми, 
+о которых не подозревал. Спасибо за тренинг. 
+</p>
+</div>
+<br />
+</div>
+	  <div className="carousel-item">
+            <img className="img-fluid mx-auto d-block" src="images/p4.jpg" alt="Четвертый слайд" /><br />
+<div className="text-center">
+<p className="mx-auto d-block">
+София, Москва.
+</p>
+<p className="mx-auto d-block">
+Благодаря онлайн-встрече "возврат в детство" я сумела справиться с апатией и поверить в себя. 
+ Я нашла в себе такую веру, которую раньше не чувствовала. Может быть и подозревала, что она есть. 
+Но вот так прикоснуться к ней, мне ещё не удавалось. 
+Я нашла в себе такую часть, которая бесконечно верит в меня, что бы ни происходило, 
+которая со мной до конца.
+</p>
+</div>
+<br />
+</div>
         </div>
+        <a className="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+          <span className="carousel-control-prev-icon" aria-hidden="true" />
+          <span className="sr-only">Previous</span>
+        </a>
+        <a className="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+          <span className="carousel-control-next-icon" aria-hidden="true" />
+          <span className="sr-only">Next</span>
+        </a>
       </div>
+
+ 
+        </div>
+        </div>     
     </section>
   );
 };
@@ -483,11 +515,6 @@ const Contact = props => {
 </a> 
 </p>
  
-<p className="title mx-auto d-block">
-
-<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeotvkKaNvJosCTJKWtIGun5WZoYfqciQ8QRVgtv4oZzW0Klg/viewform?embedded=true" width="320" height="520" frameborder="0" marginheight="0" marginwidth="0" seamless>Загрузка...</iframe>
-
-</p>
       
 </h1>
 
@@ -603,7 +630,7 @@ class App extends React.Component {
         <Nav toggleMenu={this.toggleMenu} showMenu={this.state.menuState} />
         <Header />
         <About />
-        <Projects />
+        <FeedBack />
         <Contact />
         <Footer />
       </React.Fragment>
