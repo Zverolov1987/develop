@@ -1415,7 +1415,7 @@ transition:all 1s ease-out;
   color: black;
   line-height: 1.9rem;
 
-background: linear-gradient(300deg,#00BFBA 15%, black 3%, purple 75%, darkblue 15%);
+background: linear-gradient(400deg,#00BFBA 15%, black 3%, purple 75%, darkblue 15%);
 -webkit-background-clip: text;
 -webkit-text-fill-color: transparent;
 background-clip: text;
