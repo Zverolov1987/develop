@@ -1282,6 +1282,7 @@ transition:all 1s ease-out;
   padding-bottom: 1.5rem;
   color: black;
   line-height: 1.9rem;
+
 }
 
 
@@ -1413,6 +1414,11 @@ transition:all 1s ease-out;
   padding-bottom: 1.5rem;
   color: black;
   line-height: 1.9rem;
+
+background: linear-gradient(300deg,#00BFBA 15%, black 3%, purple 75%, darkblue 15%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+background-clip: text;
 }
 
 #about2 .desc.full {
