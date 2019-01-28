@@ -1,6 +1,36 @@
 <!DOCTYPE html>
 <html>
 <head>
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+  (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+  m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+  (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+  ym(51986030, "init", {
+       id:51986030,
+       clickmap:true,
+       trackLinks:true,
+       accurateTrackBounce:true,
+       webvisor:true
+  });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/51986030" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-132742686-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-132742686-1');
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Возврат в Детство</title>
@@ -33,8 +63,9 @@
 </head>
 <body>
 
-<div id="app"></div>
+  
 
+<div id="app"></div>
 
 
 
@@ -160,10 +191,6 @@ const Header = props => {
 
 
 
-
-
-
-
 /***********************
   About Component
  ***********************/
@@ -184,6 +211,8 @@ const About = props => {
            <img className="img-fluid mx-auto d-block" src='images/wrNew.jpg' max-width= "100%" height="auto" id="coleb"/>
         <br />
 
+<div uk-scrollspy="target: > p; cls: uk-animation-slide-top; repeat: true">
+
             <p>
     Мы работаем в области психологических услуг более 12 лет.
     Подбираем методы психотерапии индивидуально для каждого пациента.
@@ -198,6 +227,8 @@ const About = props => {
 <p>
 Гарантируем полную анонимность и конфиденциальность.
             </p>
+
+</div>
           </div>
 
         </article>
@@ -256,6 +287,7 @@ const About1 = props => {
 
 
 
+
 const About2 = props => {
   return (
     <section id="about2">
@@ -268,6 +300,8 @@ const About2 = props => {
             <h3>Возврат в детство</h3>
             <p className="separator" />
           </div>
+
+<div uk-scrollspy="target: > p; cls:uk-animation-fade; delay: 500; repeat: true">
 
 <p>Вы помните, какое это волшебство — быть ребенком? 
 Вы помните то время, когда вашим лучшим другом была мягкая игрушка — зверушка, которой 
@@ -296,6 +330,9 @@ const About2 = props => {
 
 <p>И нам всем очень не хватает непосредственной красоты тех невинных, волшебных лет. 
 Но они неподалеку — на расстоянии одного-двух ударов сердца от того места, где вы сейчас находитесь.</p>       
+
+</div>
+
           </div>
 
     </article>
@@ -385,7 +422,7 @@ const FeedBack = props => {
 <br />
 
   
-  <div id="carouselExampleIndicators" className="carousel slide carousel-fade" data-ride="carousel" data-interval="false">
+  <div id="carouselExampleIndicators" className="carousel slide carousel-fade" data-ride="carousel" data-interval="5000">
         <ol className="carousel-indicators">
           <li data-target="#carouselExampleIndicators" data-slide-to={0} className="active" />
           <li data-target="#carouselExampleIndicators" data-slide-to={1} />
@@ -394,39 +431,39 @@ const FeedBack = props => {
         </ol>
         <div className="carousel-inner">
           <div className="carousel-item active">
-            <img className="img-fluid mx-auto d-block" src="images/p1.jpg" alt="Первый слайд" /><br />
+            <img className="img-fluid mx-auto d-block" src="images/p1.png" alt="Первый слайд" /><br />
 <div className="text-center">
 <p className="mx-auto d-block">
 Лана, Саратов.
 </p>
-<p className="mx-auto d-block">
+<p className="mx-auto d-block review">
  Тренинг "Возврат в детство" позволяет осознать себя настоящую через принятие себя маленькой. 
  Он демонстрирует как можно всё изменить, если просто понять и принять себя и свою детскую историю. 
  Это первый и бесценный шаг к счастливому и любимому "себе". 
-</p>
+</p><br />
 </div>
 <br />
 </div>
           <div className="carousel-item">
-            <img className="img-fluid mx-auto d-block" src="images/p2.jpg" alt="Второй слайд" /><br />
+            <img className="img-fluid mx-auto d-block" src="images/p2.png" alt="Второй слайд" /><br />
 <div className="text-center">
 <p className="mx-auto d-block">
 Екатерина, Саратов. 
 </p>
-<p className="mx-auto d-block">
+<p className="mx-auto d-block review">
 На тренинге "Возврат в детство" я встретилась со своим внутренним ребёнком, 
 отогрела его и приняла в себе, это было очень ресурсно. Спасибо! 
-</p>
+</p><br /><br />
 </div>
 <br />
 </div>
           <div className="carousel-item">
-            <img className="img-fluid mx-auto d-block" src="images/p3.jpg" alt="Третий слайд" /><br />
+            <img className="img-fluid mx-auto d-block" src="images/p3.png" alt="Третий слайд" /><br />
 <div className="text-center">
 <p className="mx-auto d-block">
 Сергей, Москва.
 </p>
-<p className="mx-auto d-block">
+<p className="mx-auto d-block review">
 Прошёл онлайн тренинг, потому что понимал, что корни сегодняшних проблем лежат в детстве. 
 И с этими обидами, травмами, душевными терзаниями, самостоятельно справится не получается. 
 Тренинг впечатлил, получилось смягчить детские обиды на родителей, это очень важно было для меня, 
@@ -437,30 +474,23 @@ const FeedBack = props => {
 <br />
 </div>
 	  <div className="carousel-item">
-            <img className="img-fluid mx-auto d-block" src="images/p4.jpg" alt="Четвертый слайд" /><br />
+            <img className="img-fluid mx-auto d-block" src="images/p4.png" alt="Четвертый слайд" /><br />
 <div className="text-center">
 <p className="mx-auto d-block">
 София, Москва.
 </p>
-<p className="mx-auto d-block">
+<p className="mx-auto d-block review">
 Благодаря онлайн-встрече "возврат в детство" я сумела справиться с апатией и поверить в себя. 
  Я нашла в себе такую веру, которую раньше не чувствовала. Может быть и подозревала, что она есть. 
 Но вот так прикоснуться к ней, мне ещё не удавалось. 
 Я нашла в себе такую часть, которая бесконечно верит в меня, что бы ни происходило, 
 которая со мной до конца.
-</p>
+</p><br />
 </div>
 <br />
 </div>
         </div>
-        <a className="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-          <span className="carousel-control-prev-icon" aria-hidden="true" />
-          <span className="sr-only">Previous</span>
-        </a>
-        <a className="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-          <span className="carousel-control-next-icon" aria-hidden="true" />
-          <span className="sr-only">Next</span>
-        </a>
+        
       </div>
 
  
@@ -488,7 +518,10 @@ const Contact = props => {
               Решили записаться 
               на тренинг?
             </p>
-           {/*<p className="separator" />*/}
+          <p className="separator" />
+
+<div uk-scrollspy="target: > p; cls: uk-animation-slide-bottom; repeat: true">         
+
             <p className="subtitle">
               УЗНАЙТЕ СТОИМОСТЬ и зафиксируйте<br /> 
                за собой удобное для Вас время <br />
@@ -497,7 +530,7 @@ const Contact = props => {
               или пишите в Viber 8-917-205-22-50 Юлия Колесниченко
               </span></p>
               
-              
+</div>              
 
 		
         
@@ -548,9 +581,15 @@ const Footer = props => {
   return (
     <footer>
       <div className="wrapper">
+
+
+
         <h3>тел. 8(8452)93-97-30,<br /> 8-917-205-22-50</h3>
   <h4>© {new Date().getFullYear()} Запишись на тренинг и измени свою жизнь к лучшему прямо сейчас</h4>
         <SocialLinks />
+
+
+
       </div>
     </footer>
   );

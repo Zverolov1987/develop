@@ -26,7 +26,6 @@ body {
 
 
 
-
 a,
 a:visited {
   color: #252934;
@@ -288,10 +287,6 @@ background-image: linear-gradient(to top, grey 0%, #00BFBA 100%);
 
 
 
-
-
-
-
 /*****************
  *****************
     NAV STYLES
@@ -406,10 +401,10 @@ background-image: linear-gradient(to top, grey 0%, #00BFBA 100%);
  *****************/
 
 #welcome-section {
-  background: #202736;
+  background: #202736; 
   background: linear-gradient(to bottom, #181d23 0%, #202736 80%);
   background-attachment: fixed;
-  background-size: cover;
+  background-size: cover;  
   position: relative;
   min-height: 100vh;
   margin: 0 auto;
@@ -420,12 +415,12 @@ background-image: linear-gradient(to top, grey 0%, #00BFBA 100%);
   content: '';
   position: fixed;
   background-image: linear-gradient(to top, black 0%, #00BFBA 100%);
-  background-attachment: fixed;
+  background-attachment: fixed; 
   width: 100%;
   min-height: 100vh;
   z-index: -1;
   opacity: 0;
-  animation: stars-move-in 1000ms 300ms forwards;
+  animation: stars-move-in 1000ms 300ms forwards;  
 }
 
 @keyframes stars-move-in {
@@ -806,6 +801,9 @@ background-image: linear-gradient(to top, grey 0%, #00BFBA 100%);
   font-size: 70%;
 }
 
+#projects .review{
+  font-size: 80% !important;
+}
 
 
 @media only screen and (max-width: 1149px) {
@@ -834,13 +832,7 @@ background-image: linear-gradient(to top, grey 0%, #00BFBA 100%);
 
 
 
-#projects .carousel-control-prev-icon {
- background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important;
-}
 
-#projects .carousel-control-next-icon {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
-}
 
 
 #projects .carousel-indicators li {
@@ -848,6 +840,7 @@ border: 1px solid black;
 height:10px;
 margin-right:5px;
 margin-left:5px;
+border-radius:50%;
 }
 
 
@@ -1415,7 +1408,7 @@ transition:all 1s ease-out;
   color: black;
   line-height: 1.9rem;
 
-background: linear-gradient(400deg,#00BFBA 15%, black 3%, purple 75%, darkblue 15%);
+background: linear-gradient(350deg,rgb(49, 2, 49) 15%, rgb(27, 5, 5) 3%, rgb(97, 3, 97) 75%, rgb(4, 4, 77) 15%);
 -webkit-background-clip: text;
 -webkit-text-fill-color: transparent;
 background-clip: text;
@@ -1605,6 +1598,7 @@ background-clip: text;
 
 
 /*****************/
+
 
 
 
